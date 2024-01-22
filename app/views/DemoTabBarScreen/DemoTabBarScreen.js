@@ -1,5 +1,5 @@
 import React  from 'react';
-import {StatusBar, View, SafeAreaView, Image, ActivityIndicator} from 'react-native';
+import {StatusBar, View, SafeAreaView, Image, ActivityIndicator, Text} from 'react-native';
 import TabNavigator from 'react-native-tab-navigator';
 
 export default class DemoTabBarScreen extends React.Component {
@@ -76,7 +76,8 @@ export default class DemoTabBarScreen extends React.Component {
                             renderIcon={() => <Image style={{tintColor: '#434343', width: 23, height: 23}} source={require('../../images/ic_demo_tabbar_home.png')} resizeMode={'contain'}/>}
                             renderSelectedIcon={() => <Image style={{tintColor: '#eb3b5a', width: 23, height: 23}} source={require('../../images/ic_demo_tabbar_home.png')} resizeMode={'contain'}/>}
                             onPress={() => this.setState({ selectedTab: 'home' })}>
-    				        <View style={{flex: 1, backgroundColor: 'red'}}>
+    				        <View style={{flex: 1, backgroundColor: 'gray', justifyContent: 'center', alignItems: 'center'}}>
+                                <Text style={{fontSize: 24, fontWeight: 'bold', color: '#434343'}}>Page 1</Text>
 							</View>
 	                        </TabNavigator.Item>
 
@@ -88,7 +89,8 @@ export default class DemoTabBarScreen extends React.Component {
                             renderIcon={() => <Image style={{tintColor: '#434343', width: 23, height: 23}} source={require('../../images/ic_demo_tabbar_profile.png')} resizeMode={'contain'}/>}
                             renderSelectedIcon={() => <Image style={{tintColor: '#eb3b5a', width: 23, height: 23}} source={require('../../images/ic_demo_tabbar_profile.png')} resizeMode={'contain'}/>}
                             onPress={() => this.setState({ selectedTab: 'profile' })}>
-    				        <View style={{flex: 1, backgroundColor: 'green'}}>
+    				        <View style={{flex: 1, backgroundColor: 'gray', justifyContent: 'center', alignItems: 'center'}}>
+                                <Text style={{fontSize: 24, fontWeight: 'bold', color: '#434343'}}>Page 2</Text>
 							</View>
                         </TabNavigator.Item>
 
